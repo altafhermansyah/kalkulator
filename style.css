@@ -1,0 +1,75 @@
+body {
+  background-color: #e5e5cb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  background-color: #3c2a21;
+  color: white;
+  box-shadow: 8px 7px black;
+  font-family: monospace;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+.box h4 {
+  text-align: left;
+  padding: 0px;
+  margin-left: 3px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.input {
+  display: flex;
+  margin: 15px;
+}
+.input #bil1,
+#bil2 {
+  background-color: #d5cea3;
+  border: 0;
+  padding: 5px;
+  margin-left: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+.plh {
+  display: flex;
+}
+.plh #pilih {
+  background-color: #d5cea3;
+  border: 0;
+  margin: 10px;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+}
+.tombol {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+}
+.tekan {
+  background-color: #1a120b;
+  border: 0;
+  color: white;
+  font-family: cursive;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.tekan:hover {
+  background-color: #90633c;
+}
+#hasil {
+  background-color: #dfdab9;
+  padding: 10px;
+  margin-bottom: 0px;
+  color: #1a120b;
+  font-weight: 700;
+  text-align: center;
+}

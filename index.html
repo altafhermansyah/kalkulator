@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator - ALTANIX</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <input type="text" id="x" placeholder="Angka Pertama">
+    <input type="text" id="y" placeholder="Angka Kedua">
+    <button onclick="hai()">HITUNG</button>
+    <p id="hasil">halo</p> -->
+    <div class="box">
+      <h1>Kalkulator</h1>
+      <div class="content">
+        <div class="input">
+          <h3>Angka 1 :</h3>
+          <input type="text" id="bil1" placeholder="Tulis Disini" />
+        </div>
+        <div class="plh">
+          <h3>Pilih Operasi :</h3>
+          <select id="pilih" name="pilih">
+            <option value="tambah">+</option>
+            <option value="kurang">-</option>
+            <option value="kali">*</option>
+            <option value="bagi">/</option>
+          </select>
+        </div>
+        <div class="input">
+          <h3>Angka 2 :</h3>
+          <input type="text" id="bil2" placeholder="Tulis Disini" />
+        </div>
+        <div class="tombol">
+          <button onclick="hitung()" class="tekan">
+            Tekan Untuk Menghitung
+          </button>
+          <p id="hasil">HASIL</p>
+        </div>
+      </div>
+      <h4>&copy; 2023 Altaf Hermansyah</h4>
+    </div>
+  </body>
+</html>
+<script>
+  // function hai() {
+  //     var bil1 = document.getElementById('x').value;
+  //     var bil2 = document.getElementById('y').value;
+  //     let hasil = parseInt(bil1) + parseInt(bil2);
+  //     console.log("hasilnya = " + hasil);
+  //     document.getElementById("hasil").innerHTML = hasil;
+  // }
+  function hitung() {
+    var bil1 = document.getElementById("bil1").value;
+    var bil2 = document.getElementById("bil2").value;
+    var select = document.getElementById("pilih");
+    var hasil = document.getElementById("hasil");
+
+    // var hasil = parseInt(bil1) + parseInt(bil2);
+    // document.getElementById("hasil").innerHTML = hasil;
+
+    select.addEventListener("change", function () {
+      var pilihan = select.value;
+
+      if (pilihan === "tambah") {
+        hasil = parseInt(bil1) + parseInt(bil2);
+        document.getElementById("hasil").innerHTML =
+          bil1 + " + " + bil2 + " = " + hasil;
+      } else if (pilihan === "kurang") {
+        hasil = parseInt(bil1) - parseInt(bil2);
+        document.getElementById("hasil").innerHTML =
+          bil1 + " - " + bil2 + " = " + hasil;
+      } else if (pilihan === "kali") {
+        hasil = parseInt(bil1) * parseInt(bil2);
+        document.getElementById("hasil").innerHTML =
+          bil1 + " * " + bil2 + " = " + hasil;
+      } else if (pilihan === "bagi") {
+        hasil = parseInt(bil1) / parseInt(bil2);
+        document.getElementById("hasil").innerHTML =
+          bil1 + " / " + bil2 + " = " + hasil;
+      }
+    });
+  }
+</script>
